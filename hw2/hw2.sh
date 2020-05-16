@@ -1,0 +1,4 @@
+# TODO: create shell script for running the testing code of the baseline model
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10CKBH9kSENkLQo46I5wb3Qn1C6NJQOAJ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10CKBH9kSENkLQo46I5wb3Qn1C6NJQOAJ" -O baseline_model_best.pth.tar && rm -rf /tmp/cookies.txt
+
+python3 src/predict_baseline.py --img_dir $1 --save_predict $2 --resume baseline_model_best.pth.tar --test_batch 1

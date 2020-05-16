@@ -1,0 +1,3 @@
+# TODO: create shell script for running the testing code of your improved model
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1ep2dIrO7ZBLqU9xS_8En-OSU_BLpBM2j' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1ep2dIrO7ZBLqU9xS_8En-OSU_BLpBM2j" -O improved_model_best.pth.tar && rm -rf /tmp/cookies.txt
+python3 src/predict_improved.py --img_dir $1 --save_predict $2 --resume improved_model_best.pth.tar --test_batch 1
