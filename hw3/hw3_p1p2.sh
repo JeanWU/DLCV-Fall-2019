@@ -1,0 +1,5 @@
+# TODO: download dcgan netG model, and acgan netG model
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1-K0AbtyOix23a5KbUEalDRixBnBSFL7B' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1-K0AbtyOix23a5KbUEalDRixBnBSFL7B" -O best_dc_negG.pth.tar && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1fWiE9yMnMhIcyfN41tvP_t8pP3HXZT1S' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1fWiE9yMnMhIcyfN41tvP_t8pP3HXZT1S" -O best_ac_negG.pth.tar && rm -rf /tmp/cookies.txt
+
+python3 src/hw3_p1p2.py --save_dir $1
